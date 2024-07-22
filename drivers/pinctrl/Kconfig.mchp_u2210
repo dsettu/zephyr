@@ -1,0 +1,10 @@
+# Microchip PINCTRL configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+config PINCTRL_MICROCHIP_PINCTRL_U2210
+	bool "Microchip pin controller driver"
+	default y
+	depends on DT_HAS_MICROCHIP_PINCTRL_U2210_ENABLED
+	help
+	  Enable Pin controller driver

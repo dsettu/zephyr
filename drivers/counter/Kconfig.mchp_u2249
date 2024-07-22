@@ -1,0 +1,10 @@
+# Microchip Counter configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+config COUNTER_MICROCHIP_TC_U2249
+	bool "Counter Driver"
+	default y
+	depends on DT_HAS_MICROCHIP_TC_U2249_COUNTER_ENABLED
+	help
+	  Enable Counter Driver 

@@ -1,0 +1,11 @@
+# Microchip DAC configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+
+config DAC_MICROCHIP_DAC_U2214
+	bool "DAC Driver"
+	default y
+	depends on DT_HAS_MICROCHIP_DAC_U2214_ENABLED
+	help
+	  Enables Digital-to-Analog (DAC) driver.

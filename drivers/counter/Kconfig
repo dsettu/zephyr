@@ -50,6 +50,8 @@ source "drivers/counter/Kconfig.sam"
 
 source "drivers/counter/Kconfig.sam0"
 
+source "drivers/counter/Kconfig.mchp_u2249"
+
 source "drivers/counter/Kconfig.ace"
 
 source "drivers/counter/Kconfig.cmos"

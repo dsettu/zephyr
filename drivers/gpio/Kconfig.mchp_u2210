@@ -1,0 +1,10 @@
+# Microchip GPIO configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+config GPIO_MICROCHIP_PORT_U2210
+	bool "GPIO driver"
+	default y
+	depends on DT_HAS_MICROCHIP_PORT_U2210_ENABLED
+	help
+	  Enable support PORT

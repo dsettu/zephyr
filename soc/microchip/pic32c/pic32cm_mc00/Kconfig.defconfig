@@ -1,0 +1,11 @@
+# Microchp PIC32CM MC00 Family
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if SOC_SERIES_PIC32CM_MC00
+
+config NUM_IRQS
+	default 29
+
+endif # SOC_SERIES_PIC32CM_MC00

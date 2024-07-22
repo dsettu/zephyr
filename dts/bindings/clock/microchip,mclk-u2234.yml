@@ -1,0 +1,19 @@
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+description: Main Clock (MCLK)
+
+compatible: "microchip,mclk-u2234"
+
+include: [clock-controller.yaml, base.yaml]
+
+properties:
+  reg:
+    required: true
+
+  "#clock-cells":
+    const: 2
+
+clock-cells:
+  - offset
+  - bit

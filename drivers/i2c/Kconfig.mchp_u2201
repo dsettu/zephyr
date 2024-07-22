@@ -1,0 +1,20 @@
+# Microchip I2C configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig I2C_MICROCHIP_SERCOM_U2201
+	bool "I2C driver"
+	default y
+	depends on DT_HAS_MICROCHIP_SERCOM_U2201_I2C_ENABLED
+	help
+	  Enable I2C driver.
+
+config I2C_SAM0_DMA_DRIVEN
+	bool "Enable DMA for I2C"
+	depends on I2C_MICROCHIP_SERCOM_U2201
+	select DMA
+	help
+	  This enables DMA driven transactions for the I2C peripheral.
+	  DMA driven mode requires fewer interrupts to handle the
+	  transaction and ensures that high speed modes are not delayed
+	  by data reloading.

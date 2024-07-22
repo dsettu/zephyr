@@ -17,6 +17,7 @@ zephyr_library_sources_ifdef(CONFIG_SPI_MCUX_FLEXIO	spi_mcux_flexio.c)
 zephyr_library_sources_ifdef(CONFIG_SPI_MCUX_LPSPI	spi_mcux_lpspi.c)
 zephyr_library_sources_ifdef(CONFIG_SPI_SAM		spi_sam.c)
 zephyr_library_sources_ifdef(CONFIG_SPI_SAM0		spi_sam0.c)
+zephyr_library_sources_ifdef(CONFIG_SPI_MICROCHIP_SERCOM_U2201	spi_mchp_u2201.c)
 zephyr_library_sources_ifdef(CONFIG_SPI_SIFIVE		spi_sifive.c)
 zephyr_library_sources_ifdef(CONFIG_SPI_RV32M1_LPSPI	spi_rv32m1_lpspi.c)
 zephyr_library_sources_ifdef(CONFIG_SPI_NRFX_SPI	spi_nrfx_spi.c

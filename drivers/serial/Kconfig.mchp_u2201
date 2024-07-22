@@ -1,0 +1,20 @@
+# Microchip UART configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+config UART_MICROCHIP_SERCOM_U2201
+	bool "USART driver"
+	default y
+	depends on DT_HAS_MICROCHIP_SERCOM_U2201_UART_ENABLED
+	select SERIAL_HAS_DRIVER
+	select SERIAL_SUPPORT_INTERRUPT
+	select UART_SERCOM_U2201_ASYNC if UART_ASYNC_API
+	select SERIAL_SUPPORT_ASYNC if DT_HAS_MICROCHIP_DMAC_U2223_ENABLED
+	help
+	  Enable USART driver
+
+config UART_SERCOM_U2201_ASYNC
+	bool "Async UART support"
+	depends on DMA_MICROCHIP_DMAC_U2223
+	depends on UART_MICROCHIP_SERCOM_U2201
+	depends on UART_ASYNC_API

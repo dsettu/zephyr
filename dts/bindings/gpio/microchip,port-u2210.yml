@@ -1,0 +1,29 @@
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+description: Microchip PORT node
+
+compatible: "microchip,port-u2210"
+
+include: [gpio-controller.yaml, base.yaml]
+
+properties:
+  reg:
+    required: true
+
+  "#gpio-cells":
+    const: 2
+
+  "#microchip,pin-cells":
+    type: int
+    required: true
+    const: 2
+    description: Number of items to expect in a microchip,pins specifier
+
+gpio-cells:
+  - pin
+  - flags
+
+microchip,pin-cells:
+  - pin
+  - peripheral

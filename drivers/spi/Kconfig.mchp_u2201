@@ -1,0 +1,11 @@
+# Microchip SPI configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+config SPI_MICROCHIP_SERCOM_U2201
+	bool "SPI driver"
+	default y
+	depends on DT_HAS_MICROCHIP_SERCOM_U2201_SPI_ENABLED
+	select DMA if SPI_ASYNC
+	help
+	  Enable SPI driver.

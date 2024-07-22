@@ -1,0 +1,14 @@
+# Microchp PIC32CM MC00 Family
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_FAMILY_PIC32C
+	select HAS_SEGGER_RTT if ZEPHYR_SEGGER_MODULE
+	select HAS_PIC32C_HAL
+
+if SOC_FAMILY_PIC32C
+
+rsource "*/Kconfig"
+
+endif # SOC_FAMILY_PIC32C

@@ -1,0 +1,46 @@
+# Microchp PIC32CM MC00 Family
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_SERIES_PIC32CM_MC00
+    bool
+	select SOC_FAMILY_PIC32C
+    help
+      Enable support for Microchip PIC32C Family of Microcontrollers.
+
+config SOC_SERIES
+    default "pic32cm_mc00" if SOC_SERIES_PIC32CM_MC00
+
+config SOC_PIC32CM1216MC00032
+    bool
+    select SOC_SERIES_PIC32CM_MC00
+
+config SOC_PIC32CM1216MC00048
+    bool
+    select SOC_SERIES_PIC32CM_MC00
+
+config SOC_PIC32CM3204MC00032
+    bool
+    select SOC_SERIES_PIC32CM_MC00
+
+config SOC_PIC32CM3204MC00048
+    bool
+    select SOC_SERIES_PIC32CM_MC00
+
+config SOC_PIC32CM6408MC00032
+    bool
+    select SOC_SERIES_PIC32CM_MC00
+
+config SOC_PIC32CM6408MC00048
+    bool
+    select SOC_SERIES_PIC32CM_MC00
+
+
+config SOC
+    default "pic32cm1216mc00032" if SOC_PIC32CM1216MC00032
+    default "pic32cm1216mc00048" if SOC_PIC32CM1216MC00048
+    default "pic32cm3204mc00032" if SOC_PIC32CM3204MC00032
+    default "pic32cm3204mc00048" if SOC_PIC32CM3204MC00048
+    default "pic32cm6408mc00032" if SOC_PIC32CM6408MC00032
+    default "pic32cm6408mc00048" if SOC_PIC32CM6408MC00048

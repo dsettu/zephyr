@@ -1,0 +1,11 @@
+description: Microchip Non-Volatile Memory Controller (NVMCTRL)
+
+compatible: "microchip,nvmctrl-03929"
+
+include: flash-controller.yaml
+
+properties:
+  lock-regions:
+    type: int
+    required: true
+    description: Number of lock regions

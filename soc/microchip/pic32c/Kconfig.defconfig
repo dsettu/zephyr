@@ -1,0 +1,20 @@
+# Microchp PIC32CM MC00 Family
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if SOC_FAMILY_PIC32C
+
+rsource "*/Kconfig.defconfig"
+
+config GPIO
+	default y
+
+config PINCTRL
+	default y
+
+config SYS_CLOCK_HW_CYCLES_PER_SEC
+	default $(dt_node_int_prop_int,/cpus/cpu@0,clock-frequency)
+
+
+endif # SOC_FAMILY_PIC32C

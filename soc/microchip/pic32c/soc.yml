@@ -1,0 +1,11 @@
+family:
+- name: pic32c
+  series:
+  - name: pic32cm_mc00
+    socs:
+    - name: pic32cm1216mc00032
+    - name: pic32cm1216mc00048
+    - name: pic32cm3204mc00032
+    - name: pic32cm3204mc00048
+    - name: pic32cm6408mc00032
+    - name: pic32cm6408mc00048

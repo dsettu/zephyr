@@ -1,0 +1,10 @@
+# Microchip PWM configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+config PWM_MICROCHIP_TCC_U2213
+	bool "PWM Driver"
+	default y
+	depends on DT_HAS_MICROCHIP_TCC_U2213_PWM_ENABLED
+	help
+	  Enable PWM driver

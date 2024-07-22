@@ -1,0 +1,11 @@
+# Microchip Timer configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+config TIMER_MICROCHIP_RTC_U2250
+	bool "Timer Driver"
+	default y
+	depends on DT_HAS_MICROCHIP_RTC_U2250_TIMER_ENABLED
+	select TICKLESS_CAPABLE
+	help
+	  Enable Timer Driver

@@ -1,0 +1,16 @@
+/* Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <microchip/pic32cm_mc00/pic32cm_mc00.dtsi>
+#include <microchip/pic32cm_mc00/pic32cm1216.dtsi>
+#include <mem.h>
+
+/ {
+    sram0: memory@20000000 {
+        compatible = "mmio-sram";
+    };
+
+};
+

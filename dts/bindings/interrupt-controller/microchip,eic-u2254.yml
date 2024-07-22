@@ -1,0 +1,16 @@
+# Microchip EIC configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+description: Microchip External Interrupt Controller
+
+compatible: "microchip,eic-u2254"
+
+include: base.yaml
+
+properties:
+  reg:
+    required: true
+
+  interrupts:
+    required: true

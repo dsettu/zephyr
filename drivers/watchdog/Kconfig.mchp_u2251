@@ -1,0 +1,11 @@
+# Microchip Watchdog configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+config WDT_MICROCHIP_WDT_U2251
+	bool "WDT Driver"
+	default y
+	depends on DT_HAS_MICROCHIP_WDT_U2251_ENABLED
+	select HAS_WDT_DISABLE_AT_BOOT
+	help
+	  Enable WDT driver.

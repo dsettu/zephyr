@@ -1,0 +1,19 @@
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+description: Microchip RTC
+
+compatible: "microchip,rtc-u2250"
+
+include:
+  - name: rtc.yaml
+  - name: pinctrl-device.yaml
+
+properties:
+  reg:
+    required: true
+
+  clock-generator:
+    type: int
+    description: clock generator index
+    required: true

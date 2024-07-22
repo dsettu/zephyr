@@ -1,0 +1,10 @@
+# Microchip DMA configuration options
+# Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+# SPDX-License-Identifier: Apache-2.0
+
+config DMA_MICROCHIP_DMAC_U2223
+	bool "Microchip DMAC driver"
+	default y
+	depends on DT_HAS_MICROCHIP_DMAC_U2223_ENABLED
+	help
+	  Enable DMA driver 
